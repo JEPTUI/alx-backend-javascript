@@ -8,10 +8,7 @@ class Car {
   }
 
   cloneCar() {
-    const clonedCar = new this.constructor();
-    // Copy the private data using the cloneData Symbol
-    clonedCar[cloneData] = Object.assign({}, this);
-    return clonedCar;
+    return new this.constructor();
   }
 }
 
