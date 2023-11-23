@@ -1,6 +1,8 @@
-function calculateNumber(type, a, b) {
-  const rA = Math.round(a);
-  const rB = Math.round(b);
+const round = (number) => Math.round(number);
+
+const calculateNumber = (type, a, b) => {
+  const rA = round(a);
+  const rB = round(b);
 
   switch (type) {
     case 'SUM':
@@ -13,8 +15,8 @@ function calculateNumber(type, a, b) {
       }
       return rA / rB;
     default:
-      throw new Error('Invalid operation type');
+      throw new Error('Invalid type');
   }
-}
+};
 
 module.exports = calculateNumber;
